@@ -49,3 +49,9 @@ let meterLength = addLength / 10;
 //..개발 완료
 console.log(addLength);
 console.log(meterLength);
+
+
+//---------------
+function add(x:number , y:number):number {
+    return x + y;
+}
