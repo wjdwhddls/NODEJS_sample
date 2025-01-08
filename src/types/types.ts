@@ -34,3 +34,8 @@ console.log(arrayOfNumbers2[2]); // 20
 //singleNumberTuple = [5];
 
 
+//함수의 명시적 타입 지정 방법 (매개변수 / Parameter)
+function greeter(name:string):string {
+    return "Hello, " + name;
+}
+console.log(greeter("Tom"));
