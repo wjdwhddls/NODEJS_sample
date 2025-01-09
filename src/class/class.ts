@@ -35,3 +35,15 @@ console.log(r3.status);
 r1.performTask("Charging");
 r2.performTask("Explorering");
 r3.updateStatus("On Repair");
+
+// No-args Constructor
+class Pet{
+    category: string = "Cat";
+    name: string = "Chu";
+
+    //기본 생성자
+    //constructor(){}
+}
+
+let p1 = new Pet();
+console.log(p1.name);
