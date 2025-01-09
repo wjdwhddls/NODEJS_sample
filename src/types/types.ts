@@ -39,3 +39,20 @@ function greeter(name:string):string {
     return "Hello, " + name;
 }
 console.log(greeter("Tom"));
+
+
+//객체 타입
+const car = {
+    color: 'red',
+    model: 'Sedan',
+    manufacturer: 'Toyota',
+}
+
+console.log(car.color);  //객체속성에 접근 할때는 . 을 이용해서 접근한다
+
+// 구분자를 (, 또는 ;) 로 사용 할 수 있음
+function printOutput(pt: {x:number, y:number}){
+    console.log("The X value is : " + pt.x);
+    console.log("The Y value is : " + pt.y);
+}
+
