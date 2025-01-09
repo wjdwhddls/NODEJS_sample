@@ -2,15 +2,24 @@
 
 class Robot { //Members
     //Property 또는 Field(속성, 필드)
-    name: string;
-    model: string;
-    status: string = "Active";
+    private name: string;
+    private model: string;
+    protected status: string = "Active";
 
     //Constructor(생성자)
     constructor(name: string, model: string){
         this.name = name;
         this.model = model;
     };
+
+    //Getter for name
+    public getName():string{
+        return this.name;        
+    }
+    //Getter for name
+    public getModel():string{
+        return this.model;        
+    }
     //Method(행동)
     performTask(task: string){
         console.log(`${this.name} is performing ${task}`);
@@ -28,9 +37,9 @@ let r2 = new Robot("R3-fd", "opeinffewwe");
 let r3 = new Robot("R4-fd", "opeinffae");
 
 // Accessing fields and Calling methods
-console.log(r1.name);
-console.log(r2.model);
-console.log(r3.status);
+console.log(r1.getName);
+console.log(r2.getModel);
+//console.log(r3.status);
 
 r1.performTask("Charging");
 r2.performTask("Explorering");
@@ -92,7 +101,7 @@ class CleaningRobot extends Robot { //Members
 
     //Method(행동)
     override performTask() {
-        console.log(`${this.name} is cleaning according to the schedule ${this.cleaningSchedule.join(",")}.`);
+        console.log(`${this.getName()} is cleaning according to the schedule ${this.cleaningSchedule.join(",")}.`);
     }
 
 }
@@ -123,3 +132,15 @@ class CookingRobot { //Members
     }
 
 }
+
+// 접근 제어자 Visivility Modifier / Access Modifier
+// public   - protected - private
+// (default)
+//public : 모든 클래스에서 접근 가능(기본값)
+//protected : 같은 클래스와 자식 클래스에서 접근 가능
+//private : 해당 클래스 내에서만 접근 가능
+
+let c1 = new CleaningRobot("ABC", "Prime", ["Sun","Mon"]);
+console.log(c1.cleaningSchedule);
+c1.performTask
+console.log(c1.getName)
