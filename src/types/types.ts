@@ -76,3 +76,13 @@ object();
 object.bar = 100;
 object = "hello";
 const n:number = object;
+
+
+//Union 타입
+function printId(id: number | string){  // number타입 or string타입
+    if(typeof id === "string"){
+        console.log(id.toUpperCase());
+    }else{
+        console.log(typeof id);  
+    }
+}
