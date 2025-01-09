@@ -137,5 +137,5 @@ var CookingRobot = /** @class */ (function () {
 //private : 해당 클래스 내에서만 접근 가능
 var c1 = new CleaningRobot("ABC", "Prime", ["Sun", "Mon"]);
 console.log(c1.cleaningSchedule);
-c1.performTask;
-console.log(c1.getName);
+c1.performTask();
+console.log(c1.getName());
