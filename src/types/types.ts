@@ -56,3 +56,14 @@ function printOutput(pt: {x:number, y:number}){
     console.log("The Y value is : " + pt.y);
 }
 
+//  객체의 선택적 속성 지정 방법
+function printName(user: {first: string, last?:string}){  // ?는 매개변수가 없어도 되고 있으면 string으로 처리해라라
+    if(user.last !== undefined){
+        console.log("Your First name is " + user.first.toUpperCase());
+        console.log("Your Last name is " + user.last.toUpperCase());
+    } else {
+        console.log("Your name is " + user.first.toLocaleLowerCase());
+    }
+}
+
+printName({first:"Bob"});
