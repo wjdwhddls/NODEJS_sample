@@ -189,3 +189,10 @@ const content2 = <Content>apiResponse;
 
 console.log(content1.id);
 console.log(content2.id);
+
+//리터럴 타입
+function printText(s: string, alignment: "left" | "right" | "center"){
+    //...
+}
+printText("Hello, world", "left");
+printText("Hello, world", "center"); // 특정 값을 타입화 하는것이지만, 재사용성이 떨어져서 다음으로 대체한다
