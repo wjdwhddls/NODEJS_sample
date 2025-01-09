@@ -105,7 +105,50 @@ printCoord({x:100, y:100});
 
 
 // 사용자 정의 타입을 사용 할 수 있음음
-type Point = { 
+//type Point = { 
+//    x: number,
+//    y: number
+//}
+
+
+interface Point{
     x: number,
     y: number
 }
+// 개방 폐쇄 원칙에 유리하다라고 했기 때문에
+// 예시
+//interface Animal {
+//    name: string;
+//}
+//interface Bear extends Animal {
+//    honey: boolean;
+//}
+//function getBear(): Bear{
+//   return{
+//        name: "Grizzly",
+//        honey: true
+//    }
+//}
+
+//const bear = getBear();
+//console.log(bear.name);  //from Animal
+//console.log(bear.honey); 
+
+//Type Alias의 확장 예시
+type Animal = {
+    name: string;
+}
+
+type Bear = Animal & {
+    honey: boolean;
+}
+
+function getBear(): Bear{
+   return{
+        name: "Grizzly",
+        honey: true
+    }
+}
+const bear = getBear();
+console.log(bear.name)
+console.log(bear.honey)

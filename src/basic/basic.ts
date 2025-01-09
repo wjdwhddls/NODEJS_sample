@@ -29,18 +29,18 @@ function flipCoin() {
 let x = 3;
 //x = [0,1,null];  //error
 
-class Animal{}
-class Rhino extends Animal{
-    hasHorn:boolean = true;
-}
-class Elephant extends Animal{
-    hasHorn:boolean = true;
-}
-class Snake extends Animal{
-    hasHorn:boolean = false;
-}
+//class Animal{}
+//class Rhino extends Animal{
+//    hasHorn:boolean = true;
+//}
+//class Elephant extends Animal{
+//    hasHorn:boolean = true;
+//}
+//class Snake extends Animal{
+//    hasHorn:boolean = false;
+//}
 
-let zoo = [new Rhino(), new Elephant(), new Snake()]
+//let zoo = [new Rhino(), new Elephant(), new Snake()]
 //Animal[] 추론 추측, 그러나 다른 타입이 지정됨
 
 
