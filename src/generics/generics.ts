@@ -46,3 +46,44 @@ console.log("result of using generics : " + result);
 
 const result2 = identityWithGenerics3(20,"Hello");
 console.log(result2);
+
+// 간단 테스트 패턴 연습
+function identityWithGenerics1<Type>(arg: Type): Type{
+    return arg;
+}
+
+function isNumber(value: any){
+    return typeof value === 'number' && !isNaN(value);
+}
+function isString(value: any){
+    return typeof value === 'string' ;
+}
+
+// given = 테스트에 필요한 초기 데이터를 설정 ->Mock 모의객체를 만들어서 사용하게 된다
+const testValue1: number = 20;
+const testValue2: string = "Hi";
+const testValue3: number[] = [1,20];
+
+// when1 = 테스트를 실행하는 부분
+const numberIdentity = identityWithGenerics1(testValue1);
+
+// then1 = 결과를 검증하고 출력하는 부분
+console.log(`Input type is : ${typeof testValue1}`);
+console.log(`Output type is : ${typeof numberIdentity}`);
+console.log(`Is number : ${isNumber(numberIdentity)}`);  //true
+
+// when2 = 테스트를 실행하는 부분
+const stringIdentity = identityWithGenerics1(testValue3);
+
+// then2 = 결과를 검증하고 출력하는 부분
+console.log(`Input type is : ${typeof testValue2}`);
+console.log(`Output type is : ${typeof stringIdentity}`);
+console.log(`Is stirng : ${isString(stringIdentity)}`);  //true
+
+// when3 = 테스트를 실행하는 부분
+const arrayIdentity = identityWithGenerics1(testValue3);
+
+// then3 = 결과를 검증하고 출력하는 부분
+console.log(`Input type is : ${typeof testValue3}`);
+console.log(`Output type is : ${typeof arrayIdentity}`);
+console.log(`Is stirng : ${Array.isArray(arrayIdentity)}`); //true
